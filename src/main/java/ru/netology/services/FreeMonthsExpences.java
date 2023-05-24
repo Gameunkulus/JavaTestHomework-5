@@ -1,8 +1,10 @@
 package ru.netology.services;
 
 public class FreeMonthsExpences {
-    public static int calculate(int account, int income, int expence, int threshold) {
+    public static int calculate(int income, int expence, int threshold) {
+        int account = 0;
         int months = 12;
+        int vacateMonths = 0;
         while (months > 0) {
             if (threshold > account) {
                 System.out.println("Денег " + account + ". Придётся работать. Заработал " + income + ", потратил " + expence);
@@ -14,10 +16,11 @@ public class FreeMonthsExpences {
                 accRest /= 3;
                 System.out.println("Денег " + account + ". Буду отдыхать. Потратил " + expence + ", затем ещё " + (account - accRest - expence));
                 account = accRest;
+                vacateMonths++;
             }
             months--;
         }
-        return account;
+        return vacateMonths;
     }
 
 }
