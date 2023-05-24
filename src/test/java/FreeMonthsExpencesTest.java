@@ -4,7 +4,7 @@ import ru.netology.services.FreeMonthsExpences;
 
 public class FreeMonthsExpencesTest {
     @Test
-    void shouldCalculateForZeroStart(){
+    void shouldCalculateForZeroStart() {
         FreeMonthsExpences prog = new FreeMonthsExpences();
         int account = 0;
         int income = 10000;

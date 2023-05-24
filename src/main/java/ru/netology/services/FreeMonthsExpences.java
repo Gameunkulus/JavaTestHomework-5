@@ -13,7 +13,6 @@ public class FreeMonthsExpences {
                 int accRest = account - expence;
                 accRest /= 3;
                 System.out.println("Денег " + account + ". Буду отдыхать. Потратил " + expence + ", затем ещё " + (account - accRest - expence));
-
                 account = accRest;
             }
             months--;
